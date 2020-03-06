@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Série de Fourier à {{n_max}} terme{{n_max|pluralize}}</p>
+{% load static %}
+<img src="{% static 'plots/img/plotting.png' %}" alt="Courbe_Fourier"/>
+{% endblock %}

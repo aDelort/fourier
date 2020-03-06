@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <link rel="stylesheet" href="/static/css/style.css" />
+   <title>{% block title %}Séries de Fourier{% endblock %}</title>
+</head>
+<body>
+<img src="{% static 'img/pi.png'%}" alt="Symbole pi" id="img_pi"/>
+<header>Séries de Fourier</header>
+    <nav>
+       {% block nav %}
+       <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/plots/">Tracés</a></li>
+            <li><a href="/help">Aide</a></li>
+       </ul>
+       {% endblock %}
+   </nav>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+</body>
+</html>
