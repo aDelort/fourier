@@ -33,5 +33,6 @@ def plotsPage(request):
 
 	#Plots
 	plt.plot(T,Y,c='green')
+	plt.title("nMax = {}".format(n_max))
 	plt.savefig('plots/static/plots/img/plotting')
 	return render(request, 'plots/plotsPage.html', {'n_max': n_max})

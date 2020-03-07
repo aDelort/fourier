@@ -1,0 +1,28 @@
+#nMax_input ,#pointsNumber
+{
+	width: 10em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#content
+{
+	display: flex;
+	margin-top: 50px;
+}
+
+#command
+{
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+/*p
+{
+	color: red;
+	background-color: blue;
+}*/

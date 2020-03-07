@@ -1,7 +1,15 @@
 {% extends "base.html" %}
+<!-- {% load static %} -->
+
+{% block imports %}
+ <link rel="stylesheet" href="{% static 'plots/css/style.css' %}" />
+{% endblock %}
 
 {% block content %}
-<p>Série de Fourier à {{n_max}} terme{{n_max|pluralize}}</p>
-{% load static %}
+<div id="command">
+<input type='number' id="nMax_input" />
+<input type='number' id="pointsNumber" />
+</div>
 <img src="{% static 'plots/img/plotting.png' %}" alt="Courbe_Fourier"/>
+<!-- <input type='button' id="valid" onclick="fichier1()"/> -->
 {% endblock %}
