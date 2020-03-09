@@ -1,14 +1,13 @@
 header
 {
 	text-align: center;
-	font-size: 1.8em;
-	font-weight: bold;
+	font-size: 1.5em;
 }
 
 *
 {
 	color: white;
-	font-family: Arial;
+	font-family: 'Lato';
 }
 
 li
@@ -30,6 +29,7 @@ body
 	background-repeat: no-repeat;
 	background-position: right top;
 	background-size: 200px; 
+	font-size: 1em;
 }
 
 /*#content
@@ -51,11 +51,13 @@ body
 
 .navLink
 {
-	border: 2px solid #1A3D29;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	color: white;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	text-decoration: none;
+	font-weight: bold;
+	/*border: 2px solid #1A3D29;*/
+
 }
 
 .navLink:hover

@@ -1,24 +1,40 @@
-#nMax_input ,#pointsNumber
+.inputBlock
 {
-	width: 10em;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.inputText
+{
+	margin-bottom: 4px;
+}
+
+.inputField
+{
+	color: black;
+	width: 10em;
+	border-radius: 4px;
 }
 
 #content
 {
 	display: flex;
 	margin-top: 50px;
+	/*margin-right: 20px;*/
 }
 
 #command
 {
+	/*border: 1px red solid;*/
 	display: flex;
 	flex-direction: column;
 	margin-top: auto;
 	margin-bottom: auto;
-	margin-left: 50px;
-	margin-right: 50px;
+	/*margin-left: 50px;*/
+	/*margin-right: 0px;*/
+	/*border: 2px red solid;*/
 }
 
 /*p
