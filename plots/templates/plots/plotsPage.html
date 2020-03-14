@@ -7,14 +7,14 @@
 
 {% block content %}
 <img src="{% static 'plots/img/plotting.png' %}" alt="Courbe_Fourier"/>
-<div id="command">
-	<!-- <form class="inputBlock">
+<!-- <div id="command">
+	<form class="inputBlock">
 		<label class="inputText">Nombre de termes</label>
 		<input type='number' class="inputField" id="nMax_field" />
 		<label class="inputText">Nombre de points</label>
 		<input type='number' class="inputField" id="numberPoints_field" />		
 		<input type="submit" value="Valider" />
-	</form> -->
+	</form>
 	<div class="inputBlock">
 		<label class="inputText">Nombre de termes</label>
 		<input type='number' class="inputField" id="nMax_field" />
@@ -23,6 +23,15 @@
 		<label class="inputText">Nombre de points</label>
 		<input type='number' class="inputField" id="numberPoints_field" />
 	</div>
-</div>
+</div> -->
 <!-- <input type='button' id="valid" onclick="fichier1()"/> -->
+
+
+{# {% if envoi %}Message envoyé{% endif %} #}
+
+<form action="{% url "formSettingPlots" %}" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Valider" id="bouton" />
+</form>
 {% endblock %}
