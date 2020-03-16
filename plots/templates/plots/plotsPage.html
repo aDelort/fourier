@@ -1,37 +1,42 @@
 {% extends "base.html" %}
-<!-- {% load static %} -->
+{% load static %}
 
 {% block imports %}
- <link rel="stylesheet" href="{% static 'plots/css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'plots/css/style.css' %}" />
 {% endblock %}
 
 {% block content %}
-<img src="{% static 'plots/img/plotting.png' %}" alt="Courbe_Fourier"/>
-<!-- <div id="command">
-	<form class="inputBlock">
-		<label class="inputText">Nombre de termes</label>
-		<input type='number' class="inputField" id="nMax_field" />
-		<label class="inputText">Nombre de points</label>
-		<input type='number' class="inputField" id="numberPoints_field" />		
-		<input type="submit" value="Valider" />
-	</form>
-	<div class="inputBlock">
-		<label class="inputText">Nombre de termes</label>
-		<input type='number' class="inputField" id="nMax_field" />
+<div id="content">
+	<img src="{% static 'plots/img/plotting.png' %}" alt="Courbe_Fourier" id="mainPlot"/>
+	
+	<div id="settings">
+		<div class="settingBlock">
+			<header>Composantes</header>
+			<form action="{% url "plotsPage" %}" method="post">
+				{% csrf_token %}
+				{{ formComponents.as_p }}
+				{# <p type="submit">VALDDE</p> #}
+				<input type="submit" value="Valider" class="button" />
+			</form>	
+		</div>
+		<div class="settingBlock">
+			<header>Graphique</header>
+			<form action="{% url "plotsPage" %}" method="post">
+				{% csrf_token %}
+				{{ formGraphic.as_p }}
+				<input type="submit" value="Valider" class="button" />
+			</form>	
+		</div>
+		<div class="settingBlock">
+			<header>Valeurs</header>
+			<form action="{% url "plotsPage" %}" method="post">
+				{% csrf_token %}
+				{{ formValues.as_p }}
+				<input type="submit" value="Valider" class="button" />
+			</form>	
+		</div>
 	</div>
-	<div style=border: 2px red solid  class="inputBlock">
-		<label class="inputText">Nombre de points</label>
-		<input type='number' class="inputField" id="numberPoints_field" />
-	</div>
-</div> -->
-<!-- <input type='button' id="valid" onclick="fichier1()"/> -->
-
-
-{# {% if envoi %}Message envoyé{% endif %} #}
-
-<form action="{% url "formSettingPlots" %}" method="post">
-	{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Valider" id="bouton" />
-</form>
+	<img src="{% static 'plots/img/An_Bn_plots.png' %}" alt="An_Bn_plots" id="coefPlot"/>
+	<img src="{% static 'plots/img/phin_plot.png' %}" alt="phi_plot" id="phiPlot"/>
+</div>
 {% endblock %}
